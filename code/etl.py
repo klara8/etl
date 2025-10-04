@@ -41,10 +41,10 @@ def transform(df_sales):
         dropped = columns_to_keep
         print("more than 5% to drop/fill")
 
-    dropped.loc[dropped["discount_percentage"] >= 0, "rating_label"] = "not that great discount"    
-    dropped.loc[dropped["discount_percentage"] >= 30, "rating_label"] = "ok discount"    
-    dropped.loc[dropped["discount_percentage"] >= 60, "rating_label"] = "good discount"
-    dropped.loc[dropped["discount_percentage"] >= 80, "rating_label"] = "great discount"
+    dropped.loc[dropped["discount_percentage"] >= 0, "disc_label"] = "not that great discount"    
+    dropped.loc[dropped["discount_percentage"] >= 30, "disc_label"] = "ok discount"    
+    dropped.loc[dropped["discount_percentage"] >= 60, "disc_label"] = "good discount"
+    dropped.loc[dropped["discount_percentage"] >= 80, "disc_label"] = "great discount"
 
 
 
